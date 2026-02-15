@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Spotify Play Site</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #121212;
+            color: white;
+            font-family: Arial, sans-serif;
+            flex-direction: column;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 20px;
+            background: #1DB954;
+            border: none;
+            border-radius: 50px;
+            color: white;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        #spotify-player {
+            display: none;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Click Below to Play Music</h1>
+    <button id="playBtn">Play Track</button>
+
+    <div id="spotify-player">
+        <iframe
+            src="https://open.spotify.com/embed/track/2rEKnx0JgrhwiWanoYdw5a"
+            width="300"
+            height="380"
+            frameborder="0"
+            allowtransparency="true"
+            allow="encrypted-media">
+        </iframe>
+    </div>
+
+    <script>
+        document.getElementById("playBtn").addEventListener("click", function() {
+            document.getElementById("spotify-player").style.display = "block";
+            this.style.display = "none";
+        });
+    </script>
+
+</body>
+</html>
